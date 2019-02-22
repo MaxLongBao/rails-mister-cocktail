@@ -13,3 +13,12 @@ puts 'Creating ingredients...'
   ingredient.save!
 end
 puts 'Finished!'
+
+puts 'Creating ingredients...'
+20.times do
+  cocktail = Cocktail.new(
+    name: Faker::Food.ingredient,
+  )
+  cocktail.save!
+end
+puts 'Finished!'

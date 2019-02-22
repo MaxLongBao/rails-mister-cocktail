@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get 'restaurants/new', to: 'restaurants#new'
   post 'restaurants', to: 'restaurants#create'
+
+  root to: 'cocktails#index'
 end
