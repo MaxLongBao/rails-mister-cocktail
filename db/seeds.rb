@@ -29,5 +29,6 @@ Ingredient.create(name: 'ice')
 Ingredient.create(name: 'mint leaves')
 Ingredient.create(name: 'gin')
 Ingredient.create(name: 'tonic water')
+
 Cocktail.create(name: 'Gin and Tonic')
 Cocktail.create(name: 'Mojito')
