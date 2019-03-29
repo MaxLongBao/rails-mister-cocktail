@@ -1,5 +1,5 @@
 <h2><%= @cocktail.name %></h2>
-<p><%= @cocktail.photo %></p>
+<%= image_tag(@cocktail.photo) %>
 
 <p><%= link_to "Add Ingredient to Cocktail", new_cocktail_dose_path(@cocktail) %></p>
 <p><%= link_to "Delete this cocktail", cocktail_path(@cocktail), method: :delete %></p>
