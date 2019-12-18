@@ -1,5 +1,12 @@
 <h2><%= @cocktail.name %></h2>
 <%= image_tag(@cocktail.photo) %>
+<% @cocktail.doses.each do|dose| %>
+  <p><%= dose.description%> | <%= dose.ingredient.name %></p>
+  <p><%= link_to cocktail_dose_path(@cocktail, dose), method: :delete,
+    data: { confirm: "Are you sure?" }, class: "font-red" do%></p>
+       <i class='far fa-trash-alt'></i>
+  <% end %>
+<% end %>
 
 <p><%= link_to "Add Ingredient to Cocktail", new_cocktail_dose_path(@cocktail) %></p>
 <p><%= link_to "Delete this cocktail", cocktail_path(@cocktail), method: :delete %></p>
